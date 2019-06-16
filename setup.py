@@ -36,7 +36,7 @@ setup(
     description="CLI interface for rewardify package",
     entry_points={
         'console_scripts': [
-            'rewardifycli=rewardifycli.cli:main',
+            'rewardify=rewardifycli.main:cli',
         ],
     },
     install_requires=requirements,
@@ -45,11 +45,15 @@ setup(
     include_package_data=True,
     keywords='rewardifycli',
     name='rewardifycli',
-    packages=find_packages(include=['rewardifycli']),
+    packages=find_packages(include=[
+        'rewardifycli',
+        'rewardifycli.__internal',
+        'rewardifycli.templates'
+    ]),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/the16thpythonist/rewardifycli',
-    version='0.0.0.0',
+    version='0.0.1',
     zip_safe=False,
 )
