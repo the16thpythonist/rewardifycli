@@ -3,10 +3,10 @@
 {{ '\033[1m' }}==============={{ '\033[0m' }}
 
 {% for pack in packs %}
-{{ pack.name }}
-{{ pack.description }}
-{{ pack.cost }}
-{{ pack['1'] }}
+{{ '\033[1m' }}{{ pack.name }}{{ '\033[0m' }}
+    cost:           {{ pack.cost }}
+    description:    {{ pack.description }}
+    probabilities:  {{ pack['1'] }}
 
 {% endfor %}
 

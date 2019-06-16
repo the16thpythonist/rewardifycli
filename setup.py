@@ -11,7 +11,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=6.0', ]
+requirements = ['Click>=6.0', 'rewardify']
 
 setup_requirements = ['pytest-runner', ]
 
@@ -54,6 +54,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/the16thpythonist/rewardifycli',
-    version='0.0.1',
+    version='0.1.0',
     zip_safe=False,
 )

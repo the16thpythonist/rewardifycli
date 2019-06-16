@@ -13,7 +13,7 @@ def install():
     pass
 
 
-@click.command('run')
+@install.command('run')
 @click.option('-p', '--path', 'path')
 def run(path):
     templater: Templater = Templater.instance()

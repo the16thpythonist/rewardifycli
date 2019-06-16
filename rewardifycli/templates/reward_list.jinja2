@@ -3,24 +3,30 @@
 {{ '\033[1m' }}================={{ '\033[0m' }}
 
 LEGENDARY REWARDS:
-
 {% for reward in legendary %}
-{{ reward.name }}
+{{ '\033[33m' }}{{ reward.name }}{{ '\033[0m' }}
+    cost:           {{ reward.cost }}
+    description:    {{ reward.description }}
 {% endfor %}
 
 RARE REWARDS:
-
 {% for reward in rare %}
-{{ reward.name }}
+{{ '\033[32m' }}{{ reward.name }}{{ '\033[0m' }}
+    cost:           {{ reward.cost }}
+    description:    {{ reward.description }}
 {% endfor %}
 
 UNCOMMON REWARDS:
-
 {% for reward in uncommon %}
-{{ reward.name }}
+{{ '\033[36m' }}{{ reward.name }}{{ '\033[0m' }}
+    cost:           {{ reward.cost }}
+    description:    {{ reward.description }}
 {% endfor %}
 
+COMMON REWARDS
 {% for reward in common %}
-{{ reward.name }}
+{{ '\033[37m' }}{{ reward.name }}{{ '\033[0m' }}
+    cost:           {{ reward.cost }}
+    description:    {{ reward.description }}
 {% endfor %}
 
